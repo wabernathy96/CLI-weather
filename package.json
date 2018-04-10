@@ -1,0 +1,24 @@
+{
+  "name": "CLI-weather",
+  "version": "1.0.0",
+  "description": "Weather API Command Line Interface",
+  "main": "CLI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wabernathy96/CLI-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wabernathy96/CLI-weather/issues"
+  },
+  "homepage": "https://github.com/wabernathy96/CLI-weather#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "weather-js": "^2.0.0"
+  }
+}
