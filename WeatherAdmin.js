@@ -1,4 +1,4 @@
-var UserSearch = require('./UserSearch.js');
+var User = require('./UserSearch.js');
 var fs = require('fs');
 var moment = require('moment');
 
@@ -21,6 +21,14 @@ Admin.prototype.getLog = function () {
     });
 };
 
+Admin.prototype.newUserSearch = function (name, location) {
+    var user = new User (name, location);
+
+    user.getDate();
+    user.logInfo();
+    user.getWeather();
+};
+
 Admin.prototype.logAdmin = function () {
 
 }
@@ -28,3 +36,6 @@ Admin.prototype.logAdmin = function () {
 var admin = new Admin ();
 
 admin.getLog();
+admin.newUserSearch('Connor', 'Houston')
+
+module.exports = Admin;
