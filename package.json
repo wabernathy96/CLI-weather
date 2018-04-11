@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wabernathy96/CLI-weather#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "moment": "^2.22.0",
     "weather-js": "^2.0.0"
   }
 }
