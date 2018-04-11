@@ -23,16 +23,15 @@ User.prototype.logInfo = function () {
 };
 
 User.prototype.getWeather = function () {
+
+    this.getDate();
+    this.logInfo();
     weather.find ({search: this.location, degreeType: 'F'}, function(err, result){
         if(err) console.log(err);
 
         console.log(JSON.stringify(result[0], null, 2)); 
     });
 };
-
-var Connor = new User ('Connor', 'Houston');
-Connor.getDate();
-Connor.logInfo();
 
 module.exports = User;
 

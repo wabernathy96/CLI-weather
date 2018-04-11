@@ -3,10 +3,7 @@ var fs = require('fs');
 var moment = require('moment');
 
 
-let Admin = function () {
-    type: admin;
-
-}
+let Admin = function () {};
 
 Admin.prototype.getLog = function () {
     fs.readFile('log.txt', 'UTF8', function(err, data){
@@ -24,18 +21,13 @@ Admin.prototype.getLog = function () {
 Admin.prototype.newUserSearch = function (name, location) {
     var user = new User (name, location);
 
-    user.getDate();
-    user.logInfo();
     user.getWeather();
 };
 
 Admin.prototype.logAdmin = function () {
+    fs.prependFile('log.txt', 'utf8', function(err, data){
 
+    })
 }
-
-var admin = new Admin ();
-
-admin.getLog();
-admin.newUserSearch('Connor', 'Houston')
 
 module.exports = Admin;
