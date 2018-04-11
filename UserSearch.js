@@ -16,7 +16,7 @@ User.prototype.getDate = function () {
 };
 
 User.prototype.logInfo = function () {
-    var userInfo = JSON.stringify(this);
+    var userInfo = `Name: ${this.name} Location: ${this.location} Date: ${this.date}`;
     fs.appendFile('log.txt', userInfo + '\n', function(err){
         if(err) console.log(err);
     })
