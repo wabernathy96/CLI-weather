@@ -1,4 +1,3 @@
-
 var Admin = require('./WeatherAdmin');
 
 var args = process.argv;
@@ -16,4 +15,4 @@ switch(userType) {
     case 'user': 
         admin.newUserSearch(userName, userLoc);
     break;
-}
+};
